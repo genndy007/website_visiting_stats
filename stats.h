@@ -32,7 +32,7 @@ struct VisitStat{
         + " Browser: " + browser + '\n'
         + "Timestamp: " + visitTimestamp.toString() 
         + " Spent minutes: " + std::to_string(spentTimeMinutes) + '\n'
-        + "Referral: " + referral;
+        + "Referral: " + referral + '\n';
     }
 };
 

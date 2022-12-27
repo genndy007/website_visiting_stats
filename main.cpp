@@ -1,12 +1,13 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 
 // Own code
 #include "helper.h"
 #include "stats.h"
 
 using namespace std;
+
+// web browser popularity
+
 
 
 // MAIN PROGRAM LOOP
