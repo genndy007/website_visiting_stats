@@ -1,3 +1,10 @@
 index.html,192.188.19.38,chrome,2022-12-26 19:30,40,lolo.html
 content.html,187.234.67.54,firefox,2022-12-25 20:20,15,google.com
 license.html,192.188.19.38,chrome,2022-12-27 12:40,20,pepe.html
+ololo.html,123.43.56.78,edge,2022-12-28 13:40,40,koko.html
+ololo.html,123.43.56.78,edge,2022-12-28 14:40,40,koko.html
+ololo.html,123.43.56.78,edge,2022-12-28 15:40,40,koko.html
+gogo.html,144.54.78.34,opera,2022-11-27 10:30,20,lolo.html
+gogo.html,144.54.78.34,opera,2022-11-27 10:30,20,lolo.html
+gogo.html,144.54.78.34,opera,2022-11-27 10:30,20,lolo.html
+gogo.html,144.54.78.34,opera,2022-11-27 10:30,20,lolo.html
