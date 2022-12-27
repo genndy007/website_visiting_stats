@@ -1,28 +1,11 @@
 #include <iostream>
-#include <string>
-#include <vector>
 #include <fstream>
 #include <sstream>
 
+// Own code
+#include "helper.h"
+
 using namespace std;
-
-// helper functions for data types
-vector<string> splitString(string str, char delim='\n'){
-    stringstream ss(str);
-    string buf;
-    vector<string> splitted;
-    while(getline(ss, buf, delim)){
-        splitted.push_back(buf);
-    }
-    return splitted;
-}
-
-void printVector(vector<string> vec) {
-    for (auto el : vec) {
-        cout << el << ',';
-    }
-    cout << endl;
-}
 
 // stats structs
 struct DateTime{
@@ -113,7 +96,7 @@ vector<VisitStat> readVisitStatsFromFileName(string path){
 
 // MAIN PROGRAM LOOP
 int main() {
-    vector<VisitStat> stats = readVisitStatsFromFileName("stats.txt");
+    vector<VisitStat> stats = readVisitStatsFromFileName("data/stats.txt");
     for (auto stat : stats) cout << stat.toString() << endl;
     return 0;
 }
