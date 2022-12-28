@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <map>
 
 // Own code
 #include "helper.h"
@@ -9,6 +11,14 @@
 using namespace std;
 
 // resource referral frequency
+struct ResourceToAmount{
+    string resource;
+    int amount;
+
+    string toString() {
+        return "Resource: " + resource + "; times: " + to_string(amount);
+    }
+};
 
 string getResourceNameFromUrl(string url) {
     // calculate offset from beginning
@@ -33,9 +43,42 @@ string getResourceNameFromUrl(string url) {
     return resourceName;
 }
 
-void getSortedReferrals(vector<VisitStat> stats) {
+void rtoaListShellSort(vector<ResourceToAmount>& rtoaList) {
+    int n = rtoaList.size();
+    for (int gap = n/2; gap > 0; gap /= 2) {
+        for (int i = gap; i < n; i++) {
+            ResourceToAmount temp = rtoaList[i];
+            int j;
+            for (j = i; j >= gap && rtoaList[j - gap].amount < temp.amount; j -= gap)
+                rtoaList[j] = rtoaList[j - gap];
+            rtoaList[j] = temp;
+        }
+    } 
+}
+
+vector<ResourceToAmount> getSortedReferrals(vector<VisitStat> stats) {
+    map<string, int> resourceToAmtMap;
     for (auto stat : stats) {
-        cout << getResourceNameFromUrl(stat.referral) << endl;
+        string resource = getResourceNameFromUrl(stat.referral);
+        if (!resourceToAmtMap.count(resource)) resourceToAmtMap[resource] = 1;
+        else resourceToAmtMap[resource]++;  
+    }
+    // convert into vector
+    vector<ResourceToAmount> rtoaList;
+    for (auto kv : resourceToAmtMap) {
+        ResourceToAmount rtoa = {kv.first, kv.second};
+        rtoaList.push_back(rtoa);
+    }
+    // sort with progressive shell sort - upgrade of insertion sort
+    rtoaListShellSort(rtoaList);
+    return rtoaList;
+}
+
+void printTopReferrals(vector<VisitStat> stats) {
+    vector<ResourceToAmount> rtoaList = getSortedReferrals(stats);
+    cout << "Top referrals:" << endl;
+    for (auto rtoa : rtoaList) {
+        cout << rtoa.toString() << endl;
     }
 }
 
@@ -43,8 +86,6 @@ void getSortedReferrals(vector<VisitStat> stats) {
 // MAIN PROGRAM LOOP
 int main() {
     vector<VisitStat> stats = readVisitStatsFromFileName("data/stats.txt");
-    // getSortedReferrals(stats);
-    // getResourceNameFromUrl("https://ololo.ua/popit/lookfor");
-    getSortedReferrals(stats);
+    printTopReferrals(stats);
     return 0;
 }
