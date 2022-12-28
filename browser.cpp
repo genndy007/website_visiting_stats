@@ -31,7 +31,7 @@ std::vector<BrowserToAmount> getSortedBrowserToAmount(std::vector<VisitStat> sta
         BrowserToAmount btoa = {kv.first, kv.second};
         btoaList.push_back(btoa);
     }
-    // use primitive bubble sort
+    // sort with primitive bubble sort
     btoaListBubbleSort(btoaList);
     return btoaList;
 }
