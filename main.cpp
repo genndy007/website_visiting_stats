@@ -12,7 +12,7 @@ using namespace std;
 
 // MAIN PROGRAM LOOP
 int main() {
-    vector<VisitStat> stats = readVisitStatsFromFileName("data/stats.txt");
+    vector<VisitStat> stats = readVisitStatsFromFileName("static/data/stats.txt");
     printTopReferrals(stats);
     return 0;
 }
