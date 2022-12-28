@@ -3,12 +3,15 @@
 
 
 void printMap(std::map<std::string, int> m){
+    // every map consists of key (first) and value (second)
     for (auto kv : m) {
         std::cout << kv.first << " : " << kv.second << std::endl;
     }
 }
 
+// attention to & near argument, means we sort argument, not creating new vector
 void btoaListBubbleSort(std::vector<BrowserToAmount>& btoaList) {
+    // Bubble sort algorithm (GeeksForGeeks)
     int n = btoaList.size();
     for (int i = 0; i < n - 1; i++)
         for (int j = 0; j < n - i - 1; j++)
@@ -22,6 +25,7 @@ std::vector<BrowserToAmount> getSortedBrowserToAmount(std::vector<VisitStat> sta
     std::string browserName;
     for (auto stat : stats){
         browserName = stat.browser;
+        // if element not in map, set it's value to 1, else increment
         if (!browserToAmount.count(browserName)) browserToAmount[browserName] = 1;
         else browserToAmount[browserName]++;
     }

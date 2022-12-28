@@ -9,12 +9,13 @@
 #include <src/subtasks/freqip.h>
 
 using namespace std;
+// Mean page popularity
 
 
 // MAIN PROGRAM LOOP
 int main() {
     vector<VisitStat> stats = readVisitStatsFromFileName("data/stats/stats.txt");
-    printTopNMostFreqIp(stats, 4);
+    printTopReferrals(stats);
 
     return 0;
 }

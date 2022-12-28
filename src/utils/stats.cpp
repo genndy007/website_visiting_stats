@@ -7,6 +7,7 @@
 // Read stats file
 
 DateTime castStringToDateTime(std::string dateString){
+    // every time we see some bad sizes of parsed content, we leave the function
     DateTime dt;
     // split by space on date and time
     std::vector<std::string> dateAndTime = splitString(dateString, ' ');
@@ -34,6 +35,7 @@ VisitStat castLineToVisitStat(std::string line){
     std::stringstream ss(line);
     std::string buf;
     std::vector<std::string> items;
+    // from ss into buf, split by comma
     while(getline(ss, buf, ',')){
         items.push_back(buf);
     }
@@ -54,6 +56,7 @@ std::vector<VisitStat> readVisitStatsFromFileName(std::string path){
     std::ifstream file(path);
     std::vector<VisitStat> stats;
     std::string line;
+    // from file every line cast into VisitStat
     while(getline(file, line)){
         stats.push_back(castLineToVisitStat(line));
     }

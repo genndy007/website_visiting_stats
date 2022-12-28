@@ -9,6 +9,7 @@ std::vector<std::string> splitString(std::string str, char delim){
     std::stringstream ss(str);
     std::string buf;
     std::vector<std::string> splitted;
+    // from ss into buf, divided by delim
     while(getline(ss, buf, delim)){
         splitted.push_back(buf);
     }

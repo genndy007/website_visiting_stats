@@ -16,6 +16,7 @@ struct ResourceToAmount{
     }
 };
 
+bool startsWith(std::string target, std::string prefix);
 std::string getResourceNameFromUrl(std::string url);
 void rtoaListShellSort(std::vector<ResourceToAmount>& rtoaList);
 std::vector<ResourceToAmount> getSortedReferrals(std::vector<VisitStat> stats);
