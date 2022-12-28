@@ -14,7 +14,7 @@ using namespace std;
 
 // MAIN PROGRAM LOOP
 int main() {
-    vector<VisitStat> stats = readVisitStatsFromFileName("static/data/stats.txt");
+    vector<VisitStat> stats = readVisitStatsFromFileName("data/stats/stats.txt");
     // printTopReferrals(stats);
     for (auto stat : stats) {
         cout << stat.toString() << endl;
