@@ -1,5 +1,5 @@
-#ifndef STATS_H
-#define STATS_H
+#ifndef SRC_UTILS_STATS_H
+#define SRC_UTILS_STATS_H
 
 #include <string>
 #include <vector>

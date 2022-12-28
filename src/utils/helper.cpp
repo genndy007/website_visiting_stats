@@ -1,7 +1,7 @@
 #include <sstream>
 #include <iostream>
 
-#include "helper.h"
+#include "./helper.h"
 
 // Helper functions for data types
 

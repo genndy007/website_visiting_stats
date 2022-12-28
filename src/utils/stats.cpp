@@ -1,10 +1,11 @@
 #include <sstream>
 #include <fstream>
 
-#include "stats.h"
-#include "helper.h"
+#include "./stats.h"
+#include "./helper.h"
 
-// read stats file
+// Read stats file
+
 DateTime castStringToDateTime(std::string dateString){
     DateTime dt;
     // split by space on date and time
