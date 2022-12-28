@@ -1,3 +1,6 @@
+#ifndef STATS_H
+#define STATS_H
+
 #include <string>
 #include <vector>
 
@@ -41,3 +44,5 @@ struct VisitStat{
 DateTime castStringToDateTime(std::string dateString);
 VisitStat castLineToVisitStat(std::string line);
 std::vector<VisitStat> readVisitStatsFromFileName(std::string path);
+
+#endif
