@@ -1,7 +1,7 @@
 #include <map>
 #include <iostream>
 
-#include "freqip.h"
+#include "./freqip.h"
 
 void ipToAmtListInsertionSort(std::vector<IpToAmount>& ipToAmtList) {
     int n = ipToAmtList.size();

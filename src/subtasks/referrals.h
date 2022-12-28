@@ -1,11 +1,10 @@
-#ifndef REFERRALS_H
-#define REFERRALS_H
-
+#ifndef SRC_SUBTASKS_REFERRALS_H
+#define SRC_SUBTASKS_REFERRALS_H
 
 #include <string>
 #include <vector>
 
-#include "stats.h"
+#include <src/utils/stats.h>
 
 // resource referral frequency
 struct ResourceToAmount{

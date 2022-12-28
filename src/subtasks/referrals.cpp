@@ -1,7 +1,7 @@
 #include <map>
 #include <iostream>
 
-#include "referrals.h"
+#include "./referrals.h"
 
 std::string getResourceNameFromUrl(std::string url) {
     // calculate offset from beginning

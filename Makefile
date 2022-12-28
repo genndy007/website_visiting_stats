@@ -1,6 +1,4 @@
-# SOURCES = main.cpp helper.cpp stats.cpp browser.cpp freqip.cpp referrals.cpp
-
-SOURCES = main.cpp src/utils/*.cpp
+SOURCES = main.cpp src/utils/*.cpp src/subtasks/*.cpp
 INCLUDED_DIRS = -I . -I ./src
 
 run:

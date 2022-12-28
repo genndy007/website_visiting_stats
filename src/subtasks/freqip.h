@@ -1,9 +1,9 @@
-#ifndef FREQIP_H
-#define FREQIP_H
+#ifndef SRC_SUBTASKS_FREQIP_H
+#define SRC_SUBTASKS_FREQIP_H
 
 #include <vector>
 #include <string>
-#include "stats.h"
+#include <src/utils/stats.h>
 
 // sort by most frequent ip addresses
 struct IpToAmount{

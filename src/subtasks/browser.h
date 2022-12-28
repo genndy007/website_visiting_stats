@@ -1,11 +1,11 @@
-#ifndef GRANDPARENT_H
-#define GRANDPARENT_H
+#ifndef SRC_SUBTASKS_BROWSER_H
+#define SRC_SUBTASKS_BROWSER_H
 
 #include <string>
 #include <map>
 #include <vector>
 
-#include "stats.h"
+#include <src/utils/stats.h>
 
 // web browser popularity
 struct BrowserToAmount{
