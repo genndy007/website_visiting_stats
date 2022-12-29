@@ -20,6 +20,7 @@ void printMenu() {
     cout << "2. TOP referrals by visiting" << endl;
     cout << "3. TOP [n] IP addresses by visiting" << endl;
     cout << "4. Mean page popularity during last month by hours" << endl;
+    cout << "0. Exit" << endl;
 }
 
 int getUserIntInput(){
@@ -36,11 +37,35 @@ int getUserIntInput(){
     return input;
 }
 
+bool activateChoice(vector<VisitStat> stats, int input) {
+    // return false - stop program, true - continue
+    switch (input) {
+        case 1:
+            printBrowserByPopularity(stats);
+            break;
+        case 2:
+            printTopReferrals(stats);
+            break;
+        case 3:
+            printTopNMostFreqIp(stats, 3);
+            break;
+        case 0:
+            return false;
+        default:
+            break;
+    }
+    return true;
+}
+
 void cliApp() {
+    vector<VisitStat> stats = readVisitStatsFromFileName("data/stats/stats.txt");
     bool running = true;
+    int input;
     while (running) {
         printMenu();
-        getUserIntInput();
+        input = getUserIntInput();
+        running = activateChoice(stats, input);
+        cout << endl;
     }
 }
 
