@@ -50,8 +50,8 @@ bool activateChoice(std::vector<VisitStat> stats, int input) {
     return true;
 }
 
-void cliApp() {
-    std::vector<VisitStat> stats = readVisitStatsFromFileName("data/stats/stats.txt");
+void cliApp(std::string statsPath) {
+    std::vector<VisitStat> stats = readVisitStatsFromFileName(statsPath);
     bool running = true;
     int input;
     while (running) {

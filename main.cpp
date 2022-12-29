@@ -12,6 +12,6 @@ int main() {
     // vector<VisitStat> stats = readVisitStatsFromFileName("data/stats/stats.txt");
     // printTopReferrals(stats);
 
-    cliApp();
+    cliApp("data/stats/stats.txt");
     return 0;
 }

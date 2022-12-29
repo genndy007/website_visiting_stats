@@ -8,6 +8,6 @@
 void printMenu();
 int getUserIntInput();
 bool activateChoice(std::vector<VisitStat> stats, int input);
-void cliApp();
+void cliApp(std::string statsPath);
 
 #endif
