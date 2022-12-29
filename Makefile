@@ -1,4 +1,4 @@
-SOURCES = main.cpp src/utils/*.cpp src/subtasks/*.cpp
+SOURCES = main.cpp src/utils/*.cpp src/subtasks/*.cpp src/cli/*.cpp
 INCLUDED_DIRS = -I . -I ./src
 BINARY_PATH = ./bin/exe
 
